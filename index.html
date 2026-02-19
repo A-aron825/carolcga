@@ -1,206 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Carol Liu, CPA, CGA</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Inter', sans-serif;
-      line-height: 1.6;
-      color: #1f2933;
-      background: #f8fafc;
-    }
-
-    header {
-      background: white;
-      padding: 16px 32px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    nav a {
-      margin-left: 20px;
-      text-decoration: none;
-      color: #374151;
-      font-weight: 500;
-    }
-
-    nav a:hover { color: #2563eb; }
-
-    .hero {
-      padding: 80px 20px;
-      text-align: center;
-      background: linear-gradient(135deg, #2563eb, #1d4ed8);
-      color: white;
-    }
-
-    .hero h1 { font-size: 42px; margin-bottom: 16px; }
-    .hero p { font-size: 18px; margin-bottom: 24px; }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 24px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: 600;
-      margin: 6px;
-    }
-
-    .btn-primary { background: white; color: #1d4ed8; }
-    .btn-outline { border: 2px solid white; color: white; }
-
-    section { padding: 60px 20px; max-width: 1100px; margin: auto; }
-
-    .section-title {
-      text-align: center;
-      font-size: 28px;
-      margin-bottom: 40px;
-      font-weight: 700;
-    }
-
-    .about {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 40px;
-      align-items: center;
-    }
-
-    .about img {
-      width: 100%;
-      border-radius: 20px;
-      background: #e5e7eb;
-      height: 260px;
-      object-fit: cover;
-    }
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: white;
-      padding: 24px;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    }
-
-    .card h3 { margin-bottom: 10px; }
-
-    .testimonials {
-      display: grid;
-      gap: 20px;
-    }
-
-    .testimonial {
-      background: white;
-      padding: 20px;
-      border-radius: 14px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      font-style: italic;
-    }
-
-    .contact {
-      text-align: center;
-    }
-
-    footer {
-      background: #111827;
-      color: #d1d5db;
-      text-align: center;
-      padding: 30px 20px;
-      margin-top: 40px;
-    }
-
-    @media (max-width: 768px) {
-      .about { grid-template-columns: 1fr; text-align: center; }
-      .hero h1 { font-size: 32px; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Carol Liu, CPA, CGA | Professional Accounting & Tax Advisory Canada</title>
+    <meta name="description" content="Carol Liu, CPA, CGA Professional Corp. provides expert tax planning, corporate advisory, and financial statements for entrepreneurs and high-net-worth individuals in Canada.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3, .serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .bg-mesh {
+            background-color: #ffffff;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(79, 70, 229, 0.05) 0, transparent 50%), 
+                radial-gradient(at 50% 0%, rgba(99, 102, 241, 0.03) 0, transparent 50%), 
+                radial-gradient(at 100% 0%, rgba(79, 70, 229, 0.05) 0, transparent 50%);
+        }
+        .lang-zh {
+            font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        ::selection {
+            background-color: #4f46e5;
+            color: white;
+        }
+        /* Custom scrollbar for premium feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f8fafc;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #e2e8f0;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #cbd5e1;
+        }
+        /* Glassmorphism utility */
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.40.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.3"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
 </head>
-<body>
-
-<header>
-  <strong>Carol Liu, CPA, CGA</strong>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#testimonials">Testimonials</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
-
-<section class="hero">
-  <h1>Professional Tax & Accounting Services</h1>
-  <p>Helping individuals and small businesses stay organized, compliant, and financially confident.</p>
-  <a href="#contact" class="btn btn-primary">Contact Me</a>
-  <a href="#services" class="btn btn-outline">View Services</a>
-</section>
-
-<section id="about">
-  <h2 class="section-title">About</h2>
-  <div class="about">
-    <img src="https://via.placeholder.com/400x300" alt="Carol Liu" />
-    <p>
-      Carol Liu is a CPA, CGA providing professional accounting, tax, and business advisory services.
-      With years of experience supporting individuals and small businesses, Carol focuses on
-      practical solutions, clear communication, and long‑term financial success for her clients.
-    </p>
-  </div>
-</section>
-
-<section id="services">
-  <h2 class="section-title">Services</h2>
-  <div class="services">
-    <div class="card">
-      <h3>Personal Tax</h3>
-      <p>Accurate and timely personal income tax preparation with strategies to reduce tax burden.</p>
-    </div>
-
-    <div class="card">
-      <h3>Corporate Tax</h3>
-      <p>Comprehensive corporate tax filing and planning to keep your business compliant and efficient.</p>
-    </div>
-
-    <div class="card">
-      <h3>Bookkeeping</h3>
-      <p>Reliable bookkeeping and financial organization so you can focus on running your business.</p>
-    </div>
-
-    <div class="card">
-      <h3>Business Advisory</h3>
-      <p>Strategic guidance to support growth, improve cash flow, and strengthen decision‑making.</p>
-    </div>
-  </div>
-</section>
-
-<section id="testimonials">
-  <h2 class="section-title">Client Testimonials</h2>
-  <div class="testimonials">
-    <div class="testimonial">“Professional, responsive, and extremely knowledgeable. Highly recommended.”</div>
-    <div class="testimonial">“Carol helped streamline our accounting and saved us significant time.”</div>
-  </div>
-</section>
-
-<section id="contact" class="contact">
-  <h2 class="section-title">Contact</h2>
-  <p>Email: carol@example.com</p>
-  <p>Phone: (000) 000‑0000</p>
-  <p>Location: Canada</p>
-</section>
-
-<footer>
-  <p>© 2026 Carol Liu, CPA, CGA. All rights reserved.</p>
-</footer>
-
+<body class="bg-white text-slate-900 overflow-x-hidden">
+    <div id="root"></div>
+    <!-- Vite handles the module loading automatically from the local root -->
+    <script type="module" src="/index.tsx"></script>
 </body>
 </html>
